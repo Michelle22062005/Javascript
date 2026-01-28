@@ -1,0 +1,86 @@
+formSumit.addEventListener("submit", function(e){ 
+    e.preventDefault();
+    createUser()
+})
+✔ submit → formulario, no botón
+✔ Siempre usar e.preventDefault()
+✔ Definir variables antes de usarlas
+✔ addEventListener necesita coma + función
+
+//-------------------------
+//JS
+
+
+
+const formSumit =document.getElementById("enviar")
+
+formSumit.addEventListener("submit", function(e){ 
+    e.preventDefault();
+    createUser()
+})
+//CREAR
+function createUser(){
+    const email=document.getElementById("email").value.trim();
+    const nameUser=document.getElementById("name").value.trim()
+    const users =JSON.parse(localStorage.getItem('users')) || [];
+
+    //evitar duplicados
+    if (users.some(u => u.email === email)){
+        alert('User already exists');
+          console.log(users);
+        return
+        
+    }
+
+    const newUser ={
+        id:Date.now(),
+        nameUser,
+        email
+    };
+    users.push(newUser)
+    localStorage.setItem('users', JSON.stringify(users) )
+}
+//READ USERS
+
+function getUsers(){
+    return JSON.parse(localStorage.getItem('users')) || [];
+}
+getUsers().forEach(user => {
+  console.log(user.name, user.email);
+});
+
+//Update
+function updateUser (id, name){
+    let users = getUsers();
+    users =users.map(user =>
+        user.id ===id
+        ? { ...user,name:newName }
+        :user
+    );
+     localStorage.setItem('users', JSON.stringify(users));
+}
+//Delete
+function deleteUser(id) {
+  const users = getUsers().filter(user => user.id !== id);
+  localStorage.setItem('users', JSON.stringify(users));
+}
+
+
+//-------------------------
+//HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo</title>
+</head>
+<body>
+    <form action="" id="enviar">
+        <input id="name" type="name" placeholder="Enter your name">
+        <input id="email" type="email" placeholder="Enter your email">
+        <input  type="submit">
+    </form>
+    <script src="./index.js"></script>
+</body>
+</html>
