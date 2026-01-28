@@ -1,0 +1,75 @@
+//operadores aritmeticos
+let a = 10;
+let b = 3;
+
+a + b; // 13  (suma)
+a - b; // 7   (resta)
+a * b; // 30  (multiplicación)
+a / b; // 3.33 (división)
+a % b; // 1   (módulo / residuo)
+a ** b; // 1000 (potencia)
+
+//OPERADORES DE ASIGNACION
+let x = 5;
+
+x = 10;
+x += 3;  // x = x + 3 → 13
+x -= 2;  // 11
+x *= 2;  // 22
+x /= 2;  // 11
+
+//OPERADORES DE COMPARACION
+5 == '5';   // true  (compara valor)
+5 === '5';  // false (compara valor y tipo)
+5 != '5';   // false
+5 !== '5';  // true
+5 > 3;      // true
+5 < 3;      // false
+5 >= 5;     // true
+5 <= 4;     // false
+
+//OPERADORES LOGICOS
+true && false; // false (AND)
+true || false; // true  (OR)
+!true;         // false (NOT)
+//ejemplo
+let edad = 20;
+let tieneCedula = true;
+
+edad >= 18 && tieneCedula; // true
+
+//OPERADORES TERNARIO
+let edad = 16;
+
+let mensaje = edad >= 18
+  ? 'Mayor de edad'
+  : 'Menor de edad';
+
+//OPERADORES DE INCREMENTO Y DECREMENTO
+let contador = 0;
+
+contador++; // 1
+contador--; // 0
+
+//OPERDADORES DE CADENAS (STRINGS)
+let nombre = 'Danna';
+let saludo = 'Hola ' + nombre; // "Hola Danna"
+
+`Hola ${nombre}`;
+
+//OPERADORES DE TIPOS
+typeof 10;        // "number"
+typeof 'Hola';    // "string"
+typeof true;      // "boolean"
+typeof [];        // "object"
+
+//OPERDORES DE PERTENECIAS
+'email' in usuario; // true
+
+let numeros = [1, 2, 3];
+numeros instanceof Array; // true
+
+//definion
+users.some(u => u.email === email); // existe?
+users.find(u => u.id === 1);        // busca uno
+users.filter(u => u.active);        // filtra
