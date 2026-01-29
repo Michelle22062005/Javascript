@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+}
+.container-title{
+    max-width: 200px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+   
+}
+.header-menu{
+    background-color: #fff;
+}
+.filter-btn{
+    background-color: #fff;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.filter-btn:hover{
+    background-color: #000;
+    color: #fff;
+}
+.card{
+    box-sizing: border-box;
+}
+span{
+    color: rgb(35, 224, 66);
+}
+.card-title{
+    font-weight: 600;
+}
+.card-text{
+    color: gray;
+}
+.btnFilterCard{
+    position: absolute;
+    border: none;
+    max-width: 100px;
+    border-radius: 30px;
+    margin: 8px;
+}
+.btn-count{
+    background-color: rgb(35, 224, 66);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 600;
+}
+.card-img{
+    position: relative;
+}

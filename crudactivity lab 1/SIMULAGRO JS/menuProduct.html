@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Menu Products</title>
+</head>
+
+<body style="background-color: #eee;">
+    <header class="header-menu">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="d-flex">
+                    <img src="./assets/image/icons8-restaurant-50.png" alt="logo" width="25px" height="25px">
+                    <h2 class="navbar-brand">RestorApp</h2>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="d-flex gap-4 m-5">
+        <section class="main-menu w-75 ">
+            <!--Para buscar las cartas-->
+            <div class="menu-search mt-4 d-flex justify-content-between">
+                <h1>Our Menu</h1>
+                <button type="search" class="form-control w-50"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg> Search food...</button>
+            </div>
+            <div class="btn-filter mt-4">
+                <button type="button" class="filter-btn btn">All</button>
+                <button type="button" class="filter-btn btn"><img src="./assets/image/icons8-burger-30.png" alt="burger"
+                        width="25px" height="25px"> Burgers</button>
+                <button type="button" class="filter-btn btn"><img src="./assets/image/icons8-triangle-64.png"
+                        alt="sides" width="25px" height="25px"> Sides</button>
+                <button type="button" class="filter-btn btn"><img src="./assets/image/icons8-coffee-to-go-64.png"
+                        alt="drinks" width="25px" height="25px"> Drinks</button>
+            </div>
+            <div class="container row gap-4 mt-4">
+                <div class="card" style="width: 18rem;">
+                    <button class="btnFilterCard">BURGERS</button>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvz51IoAR10ye1SSGj5aPrz8-3p8HJrLamuA&s"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Classic Beeef Burguer <span>$8.99.</span></h5>
+                        <p class="card-text mb-5">Premiun beef patty with cheddar cheese, lettuce,....</p>
+                        <button class="form-control"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 18 18">
+                                <path
+                                    d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z" />
+                                <path
+                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                            </svg>Add to order</button>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <button class="btnFilterCard">BURGERS</button>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIuqKpKenUfaSFbZsHzYfec-aUM0UK9VB9ww&s"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Double Bacon Melt <span>$12.50</span></h5>
+                        <p class="card-text mb-5">Two patties, cryspy bacon, melted swiss cheese, and....</p>
+                        <button class="form-control"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 18 18">
+                                <path
+                                    d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z" />
+                                <path
+                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                            </svg>Add to order</button>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <button class="btnFilterCard">SIDES</button>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGSUXE5NHrap7bKkVX9GYtdqldw3U9TRHow&s"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Golden Fries <span>$3.99</span></h5>
+                        <p class="card-text mb-5">Freshly cut potatoes fried to perfection with se salt....</p>
+                        <button class="form-control"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 18 18">
+                                <path
+                                    d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z" />
+                                <path
+                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                            </svg>Add to order</button>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <button class="btnFilterCard">BURGERS</button>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvz51IoAR10ye1SSGj5aPrz8-3p8HJrLamuA&s"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Classic Beeef Burguer <span>$8.99.</span></h5>
+                        <p class="card-text mb-5">Premiun beef patty with cheddar cheese, lettuce,....</p>
+                        <button class="form-control"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 18 18">
+                                <path
+                                    d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z" />
+                                <path
+                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                            </svg>Add to order</button>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <button class="btnFilterCard">BURGERS</button>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvz51IoAR10ye1SSGj5aPrz8-3p8HJrLamuA&s"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Classic Beeef Burguer <span>$8.99.</span></h5>
+                        <p class="card-text mb-5">Premiun beef patty with cheddar cheese, lettuce,....</p>
+                        <button class="form-control"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 18 18">
+                                <path
+                                    d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z" />
+                                <path
+                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                            </svg>Add to order</button>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <button class="btnFilterCard">BURGERS</button>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvz51IoAR10ye1SSGj5aPrz8-3p8HJrLamuA&s"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Classic Beeef Burguer <span>$8.99.</span></h5>
+                        <p class="card-text mb-5">Premiun beef patty with cheddar cheese, lettuce,....</p>
+                        <button class="form-control"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 18 18">
+                                <path
+                                    d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z" />
+                                <path
+                                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                            </svg>Add to order</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="order-selected">
+            <div class="card p-3">
+                <div class="card-header d-flex justify-content-between">
+                    <div class="d-flex gap-2">
+                        <h5 class="card-title">Your Order</h5>
+                        <button class="btn-count">2</button>
+                    </div>
+                    <p>Clear all</p>
+                </div>
+                <div class="card-body">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUiFfdfUHyBpIoF9C6m82uLsLcLcb08k2l8g&s" alt="burguer" width="70px" height="70px" style="border-radius: 10px;">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

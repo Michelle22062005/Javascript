@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #eee;">
+    <main >
+        <section class="form-control w-50 m-auto mt-5 p-5 justify-content-center align-items-center" style="background-color: #fff;">
+            <div class="container-title">
+                <img src="./assets/image/icons8-restaurant-80.png" alt="logo" width="50px" height="50px">
+                <h1>RestorApp</h1>
+                <p>Create your account</p>
+            </div>
+            
+            <form id="registerForm" class="colunm g-5">
+            <div class="col-auto mb-4">
+                <label  class="visually">Ful Name</label>
+                <input type="text"  class="form-control" id="nameRegister" placeholder="Enter your name" required>
+            </div>
+            <div class="col-auto mb-4">
+                <label  class="visually">Email Address</label>
+                <input type="email"  class="form-control" id="emailRegister" placeholder="Enter your email" required>
+            </div>
+            <div class="col-auto mb-4">
+                <label >Select Role</label>
+                <select role="button" class="form-control"  id="roles" aria-label="Default select example">
+                    <option value="user">User</option>
+                </select>
+            </div>
+                
+            <div class="col-auto mb-4">
+                <label  class="visually">Password</label>
+                <input type="password" class="form-control" id="passwordRegister" placeholder="Enter your password" required>
+            </div>
+            <div class="col-auto mb-4">
+                <label  class="visually">Confirm your password</label>
+                <input type="password"  class="form-control" id="confirmPasswordRegister" placeholder="Confirm your password" required>
+            <div id="login-message"></div>
+            </div>
+            <div class="col-auto">
+                <button id="btnRegister" type="submit"  class="form-control mb-3" style="background-color: rgb(61, 224, 46);
+    border: none;">Sign in</button>
+                
+            </div>
+            
+        </form>
+        </section>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+        <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
