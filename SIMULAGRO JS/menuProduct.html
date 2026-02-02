@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  Página de menú de productos de RestorApp.
+  Incluye filtros, lista de productos y resumen del pedido.
+-->
+
+<head>
+    <!-- Configuración básica de codificación y responsive -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS desde CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>Menu Products</title>
+</head>
+
+<body style="background-color: #eee;">
+    <!-- ================= HEADER / NAVBAR ================= -->
+    <header class="header-menu">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <!-- Logo y nombre de la app -->
+                <div class="d-flex">
+                    <img src="./assets/image/icons8-restaurant-50.png" alt="logo" width="25px" height="25px">
+                    <h2 class="navbar-brand">RestorApp</h2>
+                </div>
+
+                <!-- Botón responsive para colapsar menú en móviles -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main class="d-flex gap-4 m-5">
+
+        <!-- ===== SECCIÓN PRINCIPAL DE MENÚ ===== -->
+        <section class="main-menu w-75">
+            
+            <!-- Barra de búsqueda de comida -->
+            <div class="menu-search mt-4 d-flex justify-content-between">
+                <h1 style="font-weight: 800;">Our Menu</h1>
+                <button type="search" class="form-control w-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" 
+                         class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 
+                                 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 
+                                 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg> Search food...
+                </button>
+            </div>
+
+            <!-- Botones de filtro por categoría -->
+            <div class="btns-filter mt-4">
+                <button type="button" class="filter-btn btn">All</button>
+                <button type="button" class="filter-btn btn">
+                    <img src="./assets/image/icons8-burger-30.png" alt="burger" width="25px" height="25px"> Burgers
+                </button>
+                <button type="button" class="filter-btn btn">
+                    <img src="./assets/image/icons8-triangle-64.png" alt="sides" width="25px" height="25px"> Sides
+                </button>
+                <button type="button" class="filter-btn btn">
+                    <img src="./assets/image/icons8-coffee-to-go-64.png" alt="drinks" width="25px" height="25px"> Drinks
+                </button>
+            </div>
+
+            <!-- CONTENEDOR DE PRODUCTOS / CARTAS -->
+            <div class="container row gap-4 mt-4" data-category="all">
+                
+                <!-- Cada producto es una card con info y botón "Add to order" -->
+                <div class="card" data-id="p-001" data-category="burgers" style="width: 18rem;">
+                    <button class="btnFilterCard">BURGERS</button>
+                    <img class="imgFood" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvz51IoAR10ye1SSGj5aPrz8-3p8HJrLamuA&s"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title titleFood">
+                            Classic Beeef Burguer <span class="priceFood">$8.99</span>
+                        </h5>
+                        <p class="card-text mb-5 textFood">
+                            Premium beef patty with cheddar cheese, lettuce,....
+                        </p>
+                        <button class="form-control btnAdd">
+                            <!-- Ícono de carrito -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 18 18">
+                                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 
+                                         2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 
+                                         14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 
+                                         1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                            </svg>
+                            Add to order
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ...Se repite la estructura de card para otros productos (burgers, sides, drinks, pizza) -->
+            </div>
+        </section>
+
+        <!-- ===== SECCIÓN DE PEDIDO SELECCIONADO ===== -->
+        <section class="order-selected w-50">
+            <div class="card-2 p-3 mt-5">
+                <!-- Header del pedido -->
+                <div class="card-header d-flex justify-content-between">
+                    <div class="d-flex gap-2">
+                        <h5 class="card-title">Your Order</h5>
+                        <button class="btn-count">2</button> <!-- número de items en el pedido -->
+                    </div>
+                    <p>Clear all</p> <!-- botón para limpiar el carrito -->
+                </div>
+
+                <!-- Body del pedido -->
+                <div class="card-body">
+                    <div class="card-info justify-content-between mb-3">
+                        <!-- Aquí se renderizan los productos añadidos al carrito dinámicamente -->
+                    </div>
+
+                    <hr>
+
+                    <!-- Totales -->
+                    <div class="price d-flex">
+                        <div class="col">
+                            <p>Subtotal</p>
+                            <p>Tax (8%)</p>
+                        </div>
+                        <div>
+                            <p id="subtotal"></p> <!-- subtotal dinámico -->
+                            <p id="iva"></p> <!-- impuesto dinámico -->
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <!-- Total final -->
+                    <div class="d-flex justify-content-between">
+                        <h5 class="card-title">Total</h5>
+                        <h5 id="total" style="color: rgb(35, 224, 66); font-weight: 700;"></h5>
+                    </div>
+
+                    <!-- Botón para confirmar el pedido -->
+                    <button type="button" id="btnCreateOrder" class="btn btn-primary w-100" 
+                            style="background-color: rgb(35, 224, 66); color: #000;">
+                        Confirm Order
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Script con lógica de menú y carrito -->
+    <script src="./js/menuProduct.js"></script>
+</body>
+</html>

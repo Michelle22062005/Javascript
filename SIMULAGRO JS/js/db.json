@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": "8917",
+      "name": "Marian",
+      "email": "marian@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "10a8",
+      "name": "Danna",
+      "email": "danna@gmail.com",
+      "rol": "user",
+      "openToWork": false,
+      "password": "1234"
+    },
+    {
+      "id": "a9db",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "rol": "admin",
+      "openToWork": true,
+      "password": "123456"
+    }
+  ]
+}
