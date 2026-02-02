@@ -1,0 +1,131 @@
+¡Genial! Aquí te preparo un **README mejorado y profesional** para tu proyecto “RestorApp Admin”, listo para GitHub, con secciones visuales, badges y estilo moderno:
+
+````markdown
+# RestorApp Admin 🚀
+![Version](https://img.shields.io/badge/version-1.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Bootstrap](https://img.shields.io/badge/bootstrap-5.3-purple)
+
+## 📖 Descripción
+**RestorApp Admin** es un panel de administración para restaurantes que permite:  
+- Monitorear pedidos en tiempo real  
+- Gestionar el estado de los pedidos (Pending, Preparing, Ready, Delivered)  
+- Consultar estadísticas diarias: total de pedidos, pendientes y ganancias  
+- Visualizar información de clientes y sus órdenes  
+
+Todo esto en un interfaz sencilla, intuitiva y responsive gracias a **Bootstrap 5**.
+
+---
+
+## 🛠 Tecnologías
+- **Frontend:** HTML, CSS, JavaScript  
+- **Framework:** Bootstrap 5.3  
+- **Almacenamiento:** LocalStorage (frontend)  
+
+---
+
+## ⚡ Instalación
+1. Clonar el repositorio:
+```bash
+git clone https://github.com/usuario/RestorApp.git
+````
+
+2. Abrir la carpeta del proyecto en tu editor de código.
+3. Abrir `admin.html` en tu navegador o ejecutar con un servidor local (Live Server recomendado).
+
+---
+
+## 🎯 Uso
+
+1. Iniciar sesión como **Admin**.
+2. Consultar estadísticas generales en el dashboard.
+3. Revisar pedidos recientes en la tabla y hacer clic para ver detalles.
+4. Actualizar el estado de pedidos usando el panel de detalles.
+5. Filtrar o exportar pedidos según sea necesario.
+
+---
+
+## 🖼 Capturas de pantalla
+
+**Dashboard Principal:**
+![Dashboard](./assets/screenshots/dashboard.png)
+
+**Detalle de Pedidos:**
+![Pedidos](./assets/screenshots/orders.png)
+
+**Panel de Estadísticas:**
+![Estadísticas](./assets/screenshots/stats.png)
+
+---
+
+## 🚀 Funcionalidades
+
+* Mostrar **total de pedidos**, **pedidos pendientes** y **ganancias del día**
+* Tabla de pedidos con información completa (ID, usuario, fecha, estado, total)
+* Panel de detalle de pedido con:
+
+  * Lista de productos
+  * Subtotal, IVA y total
+  * Cambio de estado de pedido
+* Responsive y usable en **desktop y móvil**
+
+---
+
+## 🤝 Contribuciones
+
+1. Haz un fork del repositorio.
+2. Crea una rama para tu feature:
+
+```bash
+git checkout -b feature/nombre-feature
+```
+
+3. Realiza tus cambios y haz commit:
+
+```bash
+git commit -m "Descripción de cambios"
+```
+
+4. Haz push a tu rama:
+
+```bash
+git push origin feature/nombre-feature
+```
+
+5. Abre un **Pull Request** para revisión.
+
+---
+
+## ⚖️ Licencia
+
+Este proyecto está bajo la **licencia MIT**. Ver archivo LICENSE para más detalles.
+
+---
+
+## 👤 Autor
+
+**Danna Oyola**
+
+* GitHub: [https://github.com/dannaoyola](https://github.com/dannaoyola)
+* LinkedIn: [https://www.linkedin.com/in/dannaoyola](https://www.linkedin.com/in/dannaoyola)
+
+---
+
+## 🎥 Gif de ejemplo
+
+![Gif Demo](./assets/screenshots/demo.gif)
+
+*Visualiza cómo se gestionan pedidos y se actualiza el estado en tiempo real.*
+
+```
+
+✅ **Extras añadidos**:  
+- Badges de versión, licencia y Bootstrap  
+- Sección de funcionalidades clave  
+- Capturas y GIF de ejemplo  
+- Uso claro de Markdown profesional  
+
+---
+
+
+
