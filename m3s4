@@ -1,0 +1,103 @@
+//Traer los nombre de los input
+
+const { createElement } = require("react");
+
+const formProduct=document.getElementById("formProduct");
+
+
+
+const message =document.getElementById("message")
+const listProduct =document.getElementById("listProduct")
+
+let product=JSON.parse(localStorage.getItem("products")) || []
+/*function validateTaskInput(){
+    if(nameProduct === '' || priceProduct === '' || descriptionProducto === ''){
+    message.textContent="Please fill out the fields"
+    message.style.color="red"
+}
+}*/
+formProduct.addEventListener("submit", function(e){
+    e.preventDefault()
+    Save()
+})
+
+function Save(){
+
+    const newProduct={
+    nameProduct:document.getElementById("product").value.trim(),
+    priceProduct:document.getElementById("price").value.trim(),
+    descriptionProducto:document.getElementById("description").value.trim()
+    }
+
+    product.push(newProduct)
+    localStorage.setItem("products", JSON.stringify(products))
+
+}
+
+function showProduct(){
+    listProduct.innerHTML= ""
+    product.forEach((product) =>{
+        const list =createElement("li")
+        list=`
+            <li>${product.nameProduct}</li>
+            <li>${product.priceProduct}</li>
+            <li>${product.descriptionProducto}</li>
+        `
+        listProduct.append(list)
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Products</title>
+</head>
+<body style="background-color: rgb(168, 249, 255);">
+    <section class="card m-auto p-3 w-50">
+        <form  id="formProduct">
+            <div class="mb-3">
+                <label for="">Enter name product</label>
+                <input id="product" class="form-control" type="text" placeholder="product" required>
+            </div>
+            <div class="mb-3">
+                <label for="">Enter price product</label>
+                <input id="price" class="form-control" type="number" placeholder="$0.00" required>
+            </div>
+            <div class="mb-3">
+                <label for="">Enter price product</label>
+                <textarea class="form-control" name="text" id="description" type="text" placeholder="Enter text"></textarea>
+            </div >
+            <input type="submit" class="form-control">
+            <div id="message"></div>
+        </form>
+    </section>
+    <section class="w-50 mt-5">
+        <ul id="listProduct">
+
+        </ul>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
+
+
+
+
